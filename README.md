@@ -45,13 +45,13 @@ We will use the above 2 files in our jupyter notebooks.
 Detailed data description can be found [here](https://github.com/m2man/JERFOUCRU/tree/master/Writing%20Documents).
 
 # Method
-I tried 4 methods for this problem. 
+I showed 4 methods for this problem. 
 - PCR
 - Random Forest
 - Gradient Boosting
 - XGBoost
 
-Please check the respective notebook here: **Notebooks/**
+Please check the respective notebook [here](https://github.com/JieSun1990/Predicting_Japanese_Encephalitis/tree/main/Notebooks): **Notebooks/**
 
 ### On data thinning
 The original file used the entire dataset for training. For demonstration, I have only selected 10% of the training, test and validation set for model building. 
@@ -64,3 +64,11 @@ Test_Non_NA = Test_Non_NA.sample(frac = 0.1, replace = False, random_state = 1)
 ```
 Note that with increasing data, the hyperparameters need to be re-tuned. Results may change. 
 
+# Discussion
+XGBoost performed the best among the 4 methods, with the lowest test MSE. However, it is very difficult to obtain suitable prediction interval for XGBoost.
+
+### On correlated features
+In general, boosting and bagging produce excellent predictions despite major correlation among variables. This is great advantage of these advanced methods for healthcare-related data science problems, where multicolinearity is common. 
+
+In this problem, a number of features are correlated, as seen from the JE_PCA.ipynb.  
+![pca.png](https://i.postimg.cc/v8VSqvGZ/pca.png)](https://postimg.cc/0r9frD6T)
