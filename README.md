@@ -28,7 +28,7 @@ Next, use the supporting function `Dataframe_To_CSV.R` to convert Rds files into
 We will use the above 2 files in our jupyter notebooks. 
 
 ### Data description:
-26 X variables:
+26 **X variables**:
 
 - The bioclimatic conditions in the word, derived from rainfall and temperature on a monthly basis: 
 'Bio_01', 'Bio_02', 'Bio_03', 'Bio_04', 'Bio_05', 'Bio_06', 'Bio_07', 'Bio_08', 'Bio_09', 'Bio_10', 'Bio_11', 'Bio_12', 'Bio_13', 'Bio_14', 'Bio_15', 'Bio_16', 'Bio_17', 'Bio_18', 'Bio_19'
@@ -40,7 +40,10 @@ We will use the above 2 files in our jupyter notebooks.
 - Urban/Rural category: 'UR'
 - Elevation: 'Elv'
 
-1 Y variable: FOI. Note that FOI's range is between 0 to 0.5. You can understand this as a kind of probability, but there is an upper limit to the FOI in this dataset. 
+1 **Y variable**: 
+- Force of infection (FOI). 
+
+Note that FOI's range is between 0 to 0.5. You can understand this as a kind of probability, but there is an upper limit to the FOI in this dataset. 
 
 Detailed data description can be found [here](https://github.com/m2man/JERFOUCRU/tree/master/Writing%20Documents).
 
