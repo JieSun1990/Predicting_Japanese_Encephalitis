@@ -75,3 +75,18 @@ In general, boosting and bagging produce excellent predictions despite major cor
 
 In this problem, a number of features are correlated, as seen from the **Notebooks/JE_PCA.ipynb**.  
 ![pca.png](https://i.postimg.cc/v8VSqvGZ/pca.png)
+
+### On feature importance
+See **Notebooks/JE_GradientBoosting.ipynb** and **Notebooks/JE_XGBoost.ipynb** for a very detailed discussion on this. 
+
+In summary, decision tree models are very robust to correlated features when it comes to prediction. However, when looking at the feature importance scores,
+- in RF: some important but correlated features may have low importance score
+- in boosting: one of the pair of important but correlated features will be picked up, but not both
+
+In addition, there are various types of feature importance. Some are MDI-based, some are permutation-based. There is no consensus on which one provides more reliable indication. There are [views](https://explained.ai/rf-importance/) that permutation-based feature importance should be adopted for RF, for reader's reference. 
+
+### On prediction intervals
+Uncertainty quantification is traditionally a statistical and mathematical focus, while machine learning is more interested in prediction. There are increasing studies on the uncertainty of emsemble models in recent years to understand why and how ML models work. I believe this is an important topic in the development of data science. 
+See respective notebooks for more discussion on methods used. 
+
+
