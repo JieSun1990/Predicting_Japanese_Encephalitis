@@ -74,4 +74,4 @@ XGBoost performed the best among the 4 methods, with the lowest test MSE. Howeve
 In general, boosting and bagging produce excellent predictions despite major correlation among variables. This is great advantage of these advanced methods for healthcare-related data science problems, where multicolinearity is common. 
 
 In this problem, a number of features are correlated, as seen from the **Notebooks/JE_PCA.ipynb**.  
-![pca.png](https://i.postimg.cc/v8VSqvGZ/pca.png)](https://postimg.cc/0r9frD6T)
+![pca.png](https://i.postimg.cc/v8VSqvGZ/pca.png)
