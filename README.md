@@ -67,6 +67,20 @@ Test_Non_NA = Test_Non_NA.sample(frac = 0.1, replace = False, random_state = 1)
 ```
 Note that with increasing data, the hyperparameters need to be re-tuned. Results may change. 
 
+### On train/validation/test split
+
+It is a convention to split data into the train, validation and test set. To recap,
+- Train: to train the model
+- Validation: to tune the parameters
+- Test: to evaluate the model performance on unseen data. We only use test data once.
+
+In practice, many ML algorithms split the data into Train and Test only, because when tuning the parameters via grid search with cross validation, the algorithm is already splitting the `X_train` and `Y_train` into train and validation. We then use the tuned model to test on the `X_test`. 
+
+As a result, I did not utilise the validation set created by the original data processing. Note that if you are manually tuning the parameters one by one, you would need a separate validation set. 
+
+Depending on the size of the data, we can choose to merge the train and validation set when using grid search. However, a test set should always be prepared to evaluate the final model. 
+
+
 # Discussion
 XGBoost performed the best among the 4 methods, with the lowest test MSE. However, it is very difficult to obtain suitable prediction interval for XGBoost.
 
