@@ -101,6 +101,8 @@ In addition, there are various types of feature importance. Some are MDI-based, 
 
 ### On prediction intervals
 Uncertainty quantification is traditionally a statistical and mathematical focus, while machine learning is more interested in prediction. There are increasing studies on the uncertainty of emsemble models in recent years to understand why and how ML models work. I believe this is an important topic in the development of data science. 
-See respective notebooks for more discussion on methods used. 
+At the moment, the prediction interval for random forest is more thoroughly studied than other methods. For Gradient Boosting and XGBoost, quantile regression is used. 
+See respective notebooks for more discussion on methods used. Relevant papers are also attached. 
+
 
 
