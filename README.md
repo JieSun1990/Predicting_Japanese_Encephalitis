@@ -87,11 +87,11 @@ XGBoost performed the best among the 4 methods, with the lowest test MSE. Howeve
 ### On correlated features
 In general, boosting and bagging produce excellent predictions despite major correlation among variables. This is great advantage of these advanced methods for healthcare-related data science problems, where multicolinearity is common. 
 
-In this problem, a number of features are correlated, as seen from the **Notebooks/JE_PCA.ipynb**.  
+In this problem, a number of features are correlated, as seen from the **[Notebooks/JE_PCA.ipynb](https://github.com/JieSun1990/Predicting_Japanese_Encephalitis/blob/main/Notebooks/JE_PCA.ipynb)**.  
 ![pca.png](https://i.postimg.cc/v8VSqvGZ/pca.png)
 
 ### On feature importance
-See **Notebooks/JE_GradientBoosting.ipynb** and **Notebooks/JE_XGBoost.ipynb** for a very detailed discussion on this. 
+See **[Notebooks/JE_GradientBoosting.ipynb](https://github.com/JieSun1990/Predicting_Japanese_Encephalitis/blob/main/Notebooks/JE_GradientBoosting.ipynb)** and **[Notebooks/JE_XGBoost.ipynb](https://github.com/JieSun1990/Predicting_Japanese_Encephalitis/blob/main/Notebooks/JE_XGBoost.ipynb)** for a very detailed discussion on this. 
 
 In summary, decision tree models are very robust to correlated features when it comes to prediction. However, when looking at the feature importance scores,
 - in RF: some important but correlated features may have low importance score
