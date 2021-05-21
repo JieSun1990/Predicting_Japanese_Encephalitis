@@ -49,10 +49,10 @@ Detailed data description can be found [here](https://github.com/m2man/JERFOUCRU
 
 # Method
 I showed 4 methods for this problem. 
-- PCR
-- Random Forest
-- Gradient Boosting
-- XGBoost
+- [PCR](https://github.com/JieSun1990/Predicting_Japanese_Encephalitis/blob/main/Notebooks/JE_PCA.ipynb)
+- [Random Forest](https://github.com/JieSun1990/Predicting_Japanese_Encephalitis/blob/main/Notebooks/JE_RandomForest.ipynb)
+- [Gradient Boosting](https://github.com/JieSun1990/Predicting_Japanese_Encephalitis/blob/main/Notebooks/JE_GradientBoosting.ipynb)
+- [XGBoost](https://github.com/JieSun1990/Predicting_Japanese_Encephalitis/blob/main/Notebooks/JE_XGBoost.ipynb)
 
 Please check the respective notebook [here](https://github.com/JieSun1990/Predicting_Japanese_Encephalitis/tree/main/Notebooks): **Notebooks/**
 
