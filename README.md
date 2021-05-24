@@ -106,7 +106,7 @@ Uncertainty quantification is traditionally a statistical and mathematical focus
 At the moment, the prediction interval for random forest is more thoroughly studied than other methods. For Gradient Boosting and XGBoost, quantile regression is used. 
 See respective notebooks for more discussion on methods used. Relevant papers are also attached. 
 
-
-
+# More references
+Check out the [folder](https://github.com/JieSun1990/Predicting_Japanese_Encephalitis/tree/main/Papers_ML) for papers.
 
 
