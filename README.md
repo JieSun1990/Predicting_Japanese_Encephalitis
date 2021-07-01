@@ -101,6 +101,10 @@ In summary, decision tree models are very robust to correlated features when it 
 
 In addition, there are various types of feature importance. Some are MDI-based, some are permutation-based. There is no consensus on which one provides more reliable indication. There are [views](https://explained.ai/rf-importance/) that permutation-based feature importance should be adopted for RF, for reader's reference. 
 
+### On partial dependence plots and independent conditional expectation plots
+These are measures to improve the interpretability of the model. See notebooks for more details. Example below:
+![image](https://user-images.githubusercontent.com/58132970/124062640-a0d71600-da63-11eb-841b-ca13769c85f5.png)
+
 ### On prediction intervals
 Uncertainty quantification is traditionally a statistical and mathematical focus, while machine learning is more interested in prediction. There are increasing studies on the uncertainty of emsemble models in recent years to understand why and how ML models work. I believe this is an important topic in the development of data science. 
 At the moment, the prediction interval for random forest is more thoroughly studied than other methods. For Gradient Boosting and XGBoost, quantile regression is used. 
@@ -116,22 +120,19 @@ See respective notebooks for more discussion on methods used.
 - Check `JE_GradientBoosting.ipynb`, `JE_XGBoost.ipynb`, `JE_RandomForest.ipynb`,`JE_PCA.ipynb` for a demonstration using 10% of the data. There are explanations inside for each step. You can run on your laptop. 
 - To run on the entire dataset, use `JE_GradientBoosting_Tuned10.py`,`JE_XGBoost_Tuned10.py`,`JE_RandomForest_Tuned10.py`,`JE_PCA_Full.py`. 
 - The hyperparameters were tuned on 10% of the data, and then applied to the whole dataset. They were not tuned on the whole training dataset because it took too much time and the outcomes were often less ideal (e.g. high test MSE - this is counterintuitive, but true in this case). The tuned parameters appear to result in stable performance for the full model. 
-- The output of this step is in this folder: `0Modeling - Generate - Python_Export`, separated by model. 
+- The **output** of this step is in this folder: `0Modeling - Generate - Python_Export`, separated by model. 
 - The most important output for future use: `Endemic_FOI_RF_Quantile Regression_Full_Cov_400.csv`,`Endemic_FOI_GB_Quantile Regression_Full_Cov_400.csv`,`Endemic_FOI_XGB_Full_Cov_400.csv`(no prediction intervals), `Endemic_FOI_PCR_Full_Cov_400.csv`. 
 ![image](https://user-images.githubusercontent.com/58132970/124060629-0de8ac80-da60-11eb-8423-198c290582d5.png)
 
 3. In `1Generate_Cases`, I combined the original codes of Duy into 1 single file for each model: `Combined_Generate_Cases_Jie.R`. User will simply change the directory and run.  
 - Before running, remember to put the above endemic FOI files in this folder: `1Generate_Cases - Data`. 
-- Output of this step: `Cases_Age_xx.Rds` files in folder `1Generate_Cases - Generate - Cases` folder. Shape files in `1Generate_Cases - Generate - Cases_SHP`.
+- **Output** of this step: `Cases_Age_xx.Rds` files in folder `1Generate_Cases - Generate - Cases` folder. Shape files in `1Generate_Cases - Generate - Cases_SHP`.
 - Visualize the map for cases in each country with `shp_tmap_visualizer_Ryan.R` in folder `1Generate_Cases - Generate - Cases_SHP`. Note that this map does not plot for within country variations. 
 
 4. In `2Comparing_WHOIG`, I combined the original codes of Duy into 1 single file for each model: `Combine_Extract_Jie.R`. When running this part, note that 2 directories need to be specified:
 - Set your working directory to be the folder of `2Comparing_WHOIG`. 
 - Specify the data folder to be `1Generate_Cases - Data`. This step taks data entirely from the previous step. 
-- Output of this step is saved in `2Comparing_WHOIG - Generate`. 
+- **Output** of this step is saved in `2Comparing_WHOIG - Generate`. 
 - When checking the original code, I think that `Extract_Pop_Country.R` did not seem to take in the results (FOIs) we generated in step `0Modeling`. In Quan's description, it mentioned that this code was to 'compare population of a country between RF and WHO-IG', however I wasn't able to understand how RF could influence the population. Or, some previous steps could be missing. Running this step will generate exactly the same result as Quan, so I have excluded this from the `Combine_Extract_Jie.R`. 
-
-# More references
-Check out the [folder](https://github.com/JieSun1990/Predicting_Japanese_Encephalitis/tree/main/Papers_ML) for papers.
 
 
